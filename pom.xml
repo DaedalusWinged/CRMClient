@@ -43,7 +43,7 @@
                         <configuration>
                             <wsdlUrls>
                                 <!-- Element value is the wsdl url. When maven project gets compiled it automatically creates artifacts. -->
-                                <wsdlUrl>http://localhost:8081/wsServer/userOperationService?wsdl</wsdlUrl>
+                                <wsdlUrl>http://localhost:8080/userOperationService?wsdl</wsdlUrl>
                             </wsdlUrls>
                             <packageName>ged.daedaluswin.jaxws.artifacts.testclient</packageName>
                             <target>2.1</target>

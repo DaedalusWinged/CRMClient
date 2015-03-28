@@ -8,9 +8,9 @@ import ged.daedaluswin.jaxws.artifacts.testclient.UserOperationServiceService;
  */
 public class TestWS {
 
-    public static void main(String[] args) {
+    public static String Greetings(String name) {
         UserOperationServiceService service = new UserOperationServiceService();
         UserOperationService port = service.getUserOperationServicePort();
-        System.out.println(port.sayHello("Romanos"));
+        return port.sayHello(name);
     }
 }
