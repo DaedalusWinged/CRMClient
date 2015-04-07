@@ -1,11 +1,12 @@
-package ged.daedaluswin.jaxws;
+package ged.daedaluswin.crmclient.jaxws;
 
-import ged.daedaluswin.jaxws.artifacts.testclient.UserOperationService;
-import ged.daedaluswin.jaxws.artifacts.testclient.UserOperationServiceService;
+import ged.daedaluswin.crmclient.jaxws.artifacts.testclient.UserOperationService;
+import ged.daedaluswin.crmclient.jaxws.artifacts.testclient.UserOperationServiceService;
 
 /**
  * Created by Romanos Trechlis on 20/3/2015.
  */
+
 public class TestWS {
 
     public static String Greetings(String name) {

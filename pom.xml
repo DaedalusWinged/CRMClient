@@ -44,8 +44,10 @@
                             <wsdlUrls>
                                 <!-- Element value is the wsdl url. When maven project gets compiled it automatically creates artifacts. -->
                                 <wsdlUrl>http://localhost:8080/userOperationService?wsdl</wsdlUrl>
+                                <wsdlUrl>http://localhost:8080/authenticationWS?wsdl</wsdlUrl>
+                                <wsdlUrl>http://localhost:8080/contactManagementWS?wsdl</wsdlUrl>
                             </wsdlUrls>
-                            <packageName>ged.daedaluswin.jaxws.artifacts.testclient</packageName>
+                            <packageName>ged.daedaluswin.crmclient.jaxws.artifacts.testclient</packageName>
                             <target>2.1</target>
                         </configuration>
                         <id>test_client</id>
@@ -79,7 +81,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>ged.daedaluswin.jaxws.TestWS</mainClass>
+                            <mainClass>ged.daedaluswin.crmclient.UI.TestForm</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

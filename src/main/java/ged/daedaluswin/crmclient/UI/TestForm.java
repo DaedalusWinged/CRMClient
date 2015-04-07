@@ -1,10 +1,13 @@
-package ged.daedaluswin.UI;
+package ged.daedaluswin.crmclient.UI;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.regex.Pattern;
 
-import ged.daedaluswin.jaxws.TestWS;
+import com.google.gson.Gson;
+import ged.daedaluswin.crmclient.jaxws.ContactManagement;
+import ged.daedaluswin.crmclient.jaxws.TestWS;
 
 /**
  * Created by TeoGia on 3/22/15.
@@ -20,7 +23,7 @@ public class TestForm {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 System.out.println("I've been clicked!!!:D");
-                textArea1.setText(TestWS.Greetings(InputField.getText()));
+                textArea1.setText(ContactManagement.contactList());
             }
         });
     }
