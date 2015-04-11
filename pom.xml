@@ -81,12 +81,17 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>ged.daedaluswin.crmclient.UI.TestForm</mainClass>
+                            <mainClass>ged.daedaluswin.crmclient.UI.MainMenu</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
     </build>
 
 </project>
