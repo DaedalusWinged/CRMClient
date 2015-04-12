@@ -32,6 +32,7 @@ public class Init {
         Runtime.getRuntime().addShutdownHook(shutdownHook);
 
         WebLookAndFeel.install();
+        //TODO customize WebLaF using StyleManager (in order to produce a skin xml)
 
         if (isWindows()) {
             System.out.println("Windows OS detected");

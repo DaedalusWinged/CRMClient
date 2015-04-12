@@ -22,9 +22,17 @@ public class IconMapping {
     private static final HashMap<String, String> iconMap = new HashMap<>();
     private HashMap<String, Icon> loadedIconMap = new HashMap<>();
 
+
     private void createIconMap() {
-        iconMap.put("buttonContactManagements", "/images/" + rightIconSize() + "/customers.png");
-        iconMap.put("title", "/images/" + rightIconSize() + "/logo.png");
+        iconMap.put("contactManagementButton", "/images/" + rightIconSize() + "/customers.png");
+        iconMap.put("title", "/images/" + rightIconSize() + "/logoOrange.png");
+        iconMap.put("searchButton", "/images/" + rightIconSize() + "/search.png");
+        iconMap.put("settingsButton", "/images/" + rightIconSize() + "/tools.png");
+        iconMap.put("notificationsButton", "/images/" + rightIconSize() + "/help.png");
+        iconMap.put("profileButton", "/images/" + rightIconSize() + "/help.png");
+        iconMap.put("activityManagementButton", "/images/" + rightIconSize() + "/activities.png");
+        iconMap.put("reportingOLAPsButton", "/images/" + rightIconSize() + "/help.png");
+        iconMap.put("loyaltyManagementButton", "/images/" + rightIconSize() + "/help.png");
         System.out.println("Initiating icon-mapping for " + rightIconSize() + " screen resolution.");
     }
 
