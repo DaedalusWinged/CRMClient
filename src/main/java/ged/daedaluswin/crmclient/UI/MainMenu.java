@@ -1,10 +1,12 @@
 package ged.daedaluswin.crmclient.UI;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import ged.daedaluswin.crmclient.helper.IconMapping;
+import ged.daedaluswin.crmclient.helper.Init;
 
 /**
  * Created by TeoGia on 04 April 2015.
@@ -29,12 +31,14 @@ public class MainMenu extends JFrame{
 
         buttonContactManagements.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                new TestForm(frame);
-            }
+            public void actionPerformed(ActionEvent actionEvent) {new TestForm(frame, iconMapping);}
         });
-
     }
+
+    /**
+     * Responsible for instantiating the IconMapping Object
+     * @return Returns the Icon Mapping, after having instantiated it as an Object
+     */
     private IconMapping iconMap(){
         IconMapping iconMapping = new IconMapping();
         iconMapping.loadIconMap();
@@ -42,27 +46,15 @@ public class MainMenu extends JFrame{
 
     }
 
-    private static void _init(){
+    public static void main(String[] args)  {
+        Init._init();
 
-        //TODO theme needs to be changed according to user's OS (new function)
-        for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-            if ("com.sun.java.swing.plaf.gtk.GTKLookAndFeel".equals(info.getClassName())) {
-                try {
-                    UIManager.setLookAndFeel(info.getClassName());
-                } catch (ClassNotFoundException | InstantiationException | UnsupportedLookAndFeelException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-                break;
-            }
-        }
-
-    }
-
-    public static void main(String[] args) {
-        _init();
         SwingUtilities.invokeLater(new Runnable() {
             @Override
-            public void run() {new MainMenu();}
+            public void run() {
+                new MainMenu();
+                Init.keepRunning = false;
+            }
         });
 
     }

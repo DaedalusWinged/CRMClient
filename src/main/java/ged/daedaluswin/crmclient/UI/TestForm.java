@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import ged.daedaluswin.crmclient.helper.IconMapping;
 import ged.daedaluswin.crmclient.jaxws.ContactManagement;
 
 
@@ -16,7 +17,7 @@ public class TestForm extends JFrame {
     private JButton button1;
     private JPanel TestJpanel;
 
-    public TestForm(JFrame parentFrame) {
+    public TestForm(JFrame parentFrame, IconMapping iconMapping) {
         JFrame frame = parentFrame;
         frame.setContentPane(TestJpanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
